@@ -79,8 +79,8 @@
 
 // }
 
-
-module.exports = function toReadable (number) {
+//module.exports =
+ function toReadable (number) {
   let res =  '';
   let first =["zero",
                 "one",	
@@ -105,6 +105,7 @@ module.exports = function toReadable (number) {
                 "twenty"
       ], 
       second = [
+        "twenty",
                 "thirty",
                 "forty",
                 "fifty",
@@ -123,13 +124,13 @@ if(num.length ==3){
 
 
   
-  if ((0 <= number) && (number <= 20)) 
+  if ((num.length) && (0 <= number) && (number <= 20)) 
   { 
     return first[number];
   }
 
 if(number > 20 || number < 100){
-  
+  console.log(num[0]-3);
 return res =res + second[num[0]-3]+' ' + (toReadable(num.slice(1)) ? toReadable(num.slice(1)): '');
 }
 
@@ -139,7 +140,7 @@ return res =res + second[num[0]-3]+' ' + (toReadable(num.slice(1)) ? toReadable(
 };
 
 
-
+console.log(toReadable(921));
 
 //console.log(toReadable(930));
 // let num =930;
